@@ -6,16 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Grid, IconButton } from "@mui/material";
-<<<<<<< HEAD
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { useCart } from "../../../contexts/CartContextProvider";
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
-
-export default function OneProduct({ item }) {
-  const{addDelToCart, isProdInCart} = useCart();
-  const [inCart,setInCart] = React.useState(isProdInCart(item.id))
-  // console.log((item.id))
-=======
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import { useCart } from "../../../contexts/CartContextProvider";
@@ -23,7 +13,6 @@ import { useCart } from "../../../contexts/CartContextProvider";
 export default function OneProduct({ item }) {
   const { addDelToCart, isProdInCart } = useCart();
   const [inCart, setInCart] = React.useState(isProdInCart(item.id));
->>>>>>> 4e173b3cc2de3f4824f2d3f26d0502756b9ca8ec
 
   return (
     <Grid item xs={12} sm={6} md={4}>
@@ -49,14 +38,6 @@ export default function OneProduct({ item }) {
 
         <CardActions>
           <IconButton
-<<<<<<< HEAD
-          color={inCart? 'secondary':'inherit'}
-          onClick={()=>{addDelToCart(item);
-          setInCart(isProdInCart(item.id))
-          }}
-          >
-            {inCart?<RemoveShoppingCartIcon/>:<AddShoppingCartIcon/>}
-=======
             color={inCart ? "secondary" : "inherit"}
             onClick={() => {
               addDelToCart(item);
@@ -64,7 +45,6 @@ export default function OneProduct({ item }) {
             }}
           >
             <ShoppingCartIcon />
->>>>>>> 4e173b3cc2de3f4824f2d3f26d0502756b9ca8ec
           </IconButton>
           <Button size="small">Learn More</Button>
         </CardActions>
