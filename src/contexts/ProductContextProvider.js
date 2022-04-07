@@ -18,10 +18,12 @@ const INIT_STATE = {
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
     case ACTIONS.GET_PRODUCTS:
-      return { ...state,
+      return {
+        ...state,
         products: action.payload.data,
-        pageTotalCount: Math.ceil(action.payload.headers["x-total-count"] /
-        PRODUCTS_LIMIT),
+        pageTotalCount: Math.ceil(
+          action.payload.headers["x-total-count"] / PRODUCTS_LIMIT
+        ),
       };
     case ACTIONS.GET_ONE_PRODUCT:
       return { ...state, forEditVal: action.payload };
@@ -33,10 +35,11 @@ function reducer(state = INIT_STATE, action) {
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
   const navigate = useNavigate();
+
   const getProducts = async () => {
     try {
       let res = await axios.get(`${API}${window.location.search}`);
-      // console.log(res);
+      console.log(res);
       dispatch({
         type: ACTIONS.GET_PRODUCTS,
         payload: res,
@@ -59,7 +62,7 @@ const ProductContextProvider = ({ children }) => {
   const deleteProduct = async (prod) => {
     try {
       let res = await axios.delete(`${API}/${prod.id}`);
-      notify("success", `Продукт ${prod.title} был удален!`);
+      notify("success", `Продукт ${prod.title}был удален!`);
       getProducts();
     } catch (err) {
       notifyError(err);

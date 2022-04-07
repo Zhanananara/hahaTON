@@ -3,7 +3,7 @@
     {
       "title": " test 1231",
       "type": 20,
-      "price": 6,
+      "price": 444444,
       "description": "sdfsdfkkkkskks",
       "img": "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg",
       "id": 2
@@ -17,44 +17,36 @@
       "id": 3
     },
     {
-      "title": "sdf",
-      "type": 20,
-      "price": 23445,
-      "description": "cxvsd",
-      "img": "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg",
+      "title": "monday",
+      "type": 30,
+      "price": 400,
+      "description": "sdfsdfsdfsd",
+      "img": "https://i.pinimg.com/750x/08/01/f8/0801f8ab865c800622a02a8d2adbfa4d.jpg",
       "id": 4
-    },
-    {
-      "title": "weee",
-      "type": 20,
-      "price": 2222,
-      "description": "dddddd",
-      "img": "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg",
-      "id": 5
     },
     {
       "title": "tuesday",
       "type": 20,
-      "price": 12312312,
-      "description": "tuesday",
-      "img": "https://picfiles.alphacoders.com/297/297577.jpg",
+      "price": 123,
+      "description": "sdfsdfsdf",
+      "img": "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg",
+      "id": 5
+    },
+    {
+      "title": "wednesday",
+      "type": 30,
+      "price": 2222,
+      "description": "lkjdflskdjf",
+      "img": "https://www.omega-level.net/wp-content/uploads/2013/01/Astronaut-time.png",
       "id": 6
     },
     {
-      "title": "first",
-      "type": 20,
-      "price": 123123,
-      "description": "first",
-      "img": "https://picfiles.alphacoders.com/297/297577.jpg",
+      "title": "thurdsya",
+      "type": 30,
+      "price": 565,
+      "description": "sdfsdf",
+      "img": "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg",
       "id": 7
-    },
-    {
-      "title": "second",
-      "type": 20,
-      "price": 123,
-      "description": "second",
-      "img": "https://picfiles.alphacoders.com/297/297577.jpg",
-      "id": 8
     }
   ]
 }

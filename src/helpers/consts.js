@@ -6,8 +6,8 @@ export const ACTIONS = {
 };
 
 export const CART = {
-  GET_CART_LENGTH: 'GET_CART_LENGTH',
-  GET_CARD: 'GET_CARD',
-}
+  GET_CART_LENGTH: "GET_CART_LENGTH",
+  GET_CART: "GET_CART",
+};
 
 export const PRODUCTS_LIMIT = 3;

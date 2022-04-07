@@ -45,7 +45,7 @@ const Form = ({ saveValues, compForEdit, forEditVal, getOneProduct }) => {
     let obj = {
       ...inpValues,
       price: +inpValues.price,
-    }
+    };
     saveValues(obj);
   };
 

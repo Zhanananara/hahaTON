@@ -27,7 +27,7 @@ export default function Navbar() {
 
   React.useEffect(() => {
     getCartLength();
-  },[])
+  }, []);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
