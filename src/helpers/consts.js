@@ -11,3 +11,6 @@ export const CART = {
 };
 
 export const PRODUCTS_LIMIT = 3;
+
+export const ADMIN_EMAIL = "admin@admin.com"
+// admin123

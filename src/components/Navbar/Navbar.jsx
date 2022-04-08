@@ -15,15 +15,21 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import { Button } from "@mui/material";
 import { Link as RouterLink, NavLink } from "react-router-dom";
 import InfoIcon from "@mui/icons-material/Info";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { useCart } from "../../contexts/CartContextProvider";
-import "./Navbar.css";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import LiveSearch from "../LiveSearch/LiveSearch";
+
+import "./Navbar.css";
+import { useCart } from "../../contexts/CartContextProvider";
+import { useAuth } from "../../contexts/AuthContextProvider";
+import FaceIcon from "@mui/icons-material/Face";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const {getCartLength, cartLength} = useCart();
+
+  const { currentUser, logOutUser } = useAuth();
+  const { getCartLength, cartLength } = useCart();
 
   React.useEffect(() => {
     getCartLength();
@@ -66,8 +72,36 @@ export default function Navbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      {currentUser?.isLogged && (
+        <MenuItem
+          onClick={() => {
+            handleMenuClose();
+            logOutUser();
+          }}
+        >
+          Log Out
+        </MenuItem>
+      )}
+
+      {currentUser?.isLogged && (
+        <MenuItem onClick={handleMenuClose}>{currentUser?.user}</MenuItem>
+      )}
+
+      {!currentUser?.isLogged && (
+        <MenuItem onClick={handleMenuClose}>
+          <NavLink className="mobile-link" to="/register">
+            Register
+          </NavLink>
+        </MenuItem>
+      )}
+
+      {!currentUser?.isLogged && (
+        <MenuItem onClick={handleMenuClose}>
+          <NavLink className="mobile-link" to="/login">
+            Login
+          </NavLink>
+        </MenuItem>
+      )}
     </Menu>
   );
 
@@ -154,9 +188,11 @@ export default function Navbar() {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          color="inherit"
+          sx={{
+            color: currentUser?.isLogged ? "green" : "white",
+          }}
         >
-          <AccountCircle />
+          {currentUser?.isLogged ? <FaceIcon /> : <AccountCircle />}
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -214,18 +250,21 @@ export default function Navbar() {
             >
               PRODUCTS
             </Button>
-            <Button
-              sx={{
-                my: 2,
-                color: "white",
-                display: "block",
-                fontSize: "16px",
-              }}
-              component={NavLink}
-              to="/admin"
-            >
-              ADMIN
-            </Button>
+
+            {currentUser?.isAdmin && (
+              <Button
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontSize: "16px",
+                }}
+                component={NavLink}
+                to="/admin"
+              >
+                ADMIN
+              </Button>
+            )}
           </Box>
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -247,21 +286,25 @@ export default function Navbar() {
                 <NotificationsIcon />
               </Badge>
             </IconButton> */}
-            {/* livesearch */}
-            <LiveSearch/>
-            <RouterLink to="/cart" style={{color: "white"}}>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-haspopup="true"
-              color="inherit"
+
+            {/* Живой поиск */}
+            <LiveSearch />
+            {/* Живой поиск */}
+
+            <RouterLink to="/cart" style={{ color: "white" }}>
+              <IconButton
+                size="large"
+                edge="end"
+                aria-label="account of current user"
+                aria-haspopup="true"
+                color="inherit"
               >
-              <Badge badgeContent={+cartLength} color="error">
-              <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
+                <Badge badgeContent={+cartLength} color="error">
+                  <ShoppingBasketIcon />
+                </Badge>
+              </IconButton>
             </RouterLink>
+
             <IconButton
               size="large"
               edge="end"
@@ -269,9 +312,15 @@ export default function Navbar() {
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color="inherit"
+              sx={{
+                color: currentUser?.isLogged ? "lightgreen" : "white",
+              }}
             >
-              <AccountCircle />
+              {currentUser?.isAdmin ? (
+                <AdminPanelSettingsIcon />
+              ) : (
+                <AccountCircle />
+              )}
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
