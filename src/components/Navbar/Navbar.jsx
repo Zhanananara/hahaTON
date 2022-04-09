@@ -15,13 +15,13 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import { Button } from "@mui/material";
 import { Link as RouterLink, NavLink } from "react-router-dom";
 import InfoIcon from "@mui/icons-material/Info";
-import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LiveSearch from "../LiveSearch/LiveSearch";
 
 import "./Navbar.css";
 import { useCart } from "../../contexts/CartContextProvider";
 import { useAuth } from "../../contexts/AuthContextProvider";
-import FaceIcon from "@mui/icons-material/Face";
+import PersonIcon from "@mui/icons-material/Person";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 
 export default function Navbar() {
@@ -127,7 +127,7 @@ export default function Navbar() {
         <NavLink to="/about" className="mobile-link">
           <IconButton
             size="large"
-            aria-label="show 4 new mails"
+            aria-label="account of current user"
             color="inherit"
           >
             <InfoIcon />
@@ -139,7 +139,7 @@ export default function Navbar() {
         <NavLink to="/products" className="mobile-link">
           <IconButton
             size="large"
-            aria-label="show 4 new mails"
+            aria-label="account of current user"
             color="inherit"
           >
             <InfoIcon />
@@ -151,7 +151,7 @@ export default function Navbar() {
         <NavLink to="/admin" className="mobile-link">
           <IconButton
             size="large"
-            aria-label="show 4 new mails"
+            aria-label="account of current user"
             color="inherit"
           >
             <InfoIcon />
@@ -162,26 +162,35 @@ export default function Navbar() {
 
       {/* end of my items */}
 
+      {/* shop */}
       <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
+        <RouterLink
+          to="/cart"
+          className="mobile-link"
+          // style={{
+          //   width: "100%",
+          // }}
         >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-haspopup="true"
+            color="inherit"
+          >
+            <Badge badgeContent={+cartLength} color="error">
+              <ShoppingCartIcon />
+            </Badge>
+          </IconButton>
+          <p
+            style={{
+              marginTop: "10px",
+            }}
+          >
+            Shop
+          </p>
+        </RouterLink>
       </MenuItem>
+      {/* material */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -189,12 +198,18 @@ export default function Navbar() {
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           sx={{
-            color: currentUser?.isLogged ? "green" : "white",
+            color: currentUser?.isLogged ? "green" : "black",
           }}
         >
-          {currentUser?.isLogged ? <FaceIcon /> : <AccountCircle />}
+          {currentUser?.isLogged ? <PersonIcon /> : <AccountCircle />}
         </IconButton>
-        <p>Profile</p>
+        <p
+          style={{
+            color: currentUser?.isLogged ? "green" : "black",
+          }}
+        >
+          Profile
+        </p>
       </MenuItem>
     </Menu>
   );
@@ -255,40 +270,33 @@ export default function Navbar() {
           </Box>
 
           {/* logo */}
-          <Box sx={{ flexGrow: 1 }}>
-            <Typography
-              className="mui-link"
-              variant="h6"
-              noWrap
-              to="/"
-              component={RouterLink}
-              sx={{
-                display: { xs: "block", sm: "block", md: "flex", mx: "auto" },
-              }}
-            >
-              CHANEL
-            </Typography>
-          </Box>
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            {/* <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton> */}
-
+          <Typography
+            className="mui-link"
+            variant="h6"
+            noWrap
+            to="/"
+            component={RouterLink}
+            sx={{
+              display: {
+                xs: "block",
+                sm: "block",
+                md: "flex",
+                mx: "auto",
+              },
+              width: "100%",
+              justifyContent: "center",
+              paddingLeft: 20,
+              fontSize: "2.5rem",
+              fontWeight: "500",
+              textTransform: "uppercase",
+              fontFamily: "Sora, sans-serif",
+            }}
+          >
+            Chanel
+          </Typography>
+          <Box
+            sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}
+          >
             {/* Живой поиск */}
             <LiveSearch />
             {/* Живой поиск */}
@@ -302,7 +310,7 @@ export default function Navbar() {
                 color="inherit"
               >
                 <Badge badgeContent={+cartLength} color="error">
-                  <ShoppingBasketIcon />
+                  <ShoppingCartIcon />
                 </Badge>
               </IconButton>
             </RouterLink>
@@ -320,6 +328,8 @@ export default function Navbar() {
             >
               {currentUser?.isAdmin ? (
                 <AdminPanelSettingsIcon />
+              ) : currentUser?.isLogged ? (
+                <PersonIcon />
               ) : (
                 <AccountCircle />
               )}

@@ -6,8 +6,8 @@
 
 .footer-one {
   text-align: center;
-  margin: 15px;
-  font-size: 3.5rem;
+  margin: 1% auto;
+  font-size: 2.5rem;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 2vh 5vw;
+  margin: 0 5vw;
 }
 
 ul {
@@ -25,7 +25,7 @@ ul {
 }
 
 .sp {
-  margin-top: 15px;
+  margin: 0 auto;
   width: 220px;
 }
 
@@ -34,6 +34,7 @@ li {
 }
 
 .sp p {
+  margin: 2% auto;
   text-transform: uppercase;
   font-weight: bold;
   font-size: large;
