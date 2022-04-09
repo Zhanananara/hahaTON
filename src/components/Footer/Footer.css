@@ -33,7 +33,7 @@ li {
   color: #9b9b9b;
 }
 
-p {
+.sp p {
   text-transform: uppercase;
   font-weight: bold;
   font-size: large;
