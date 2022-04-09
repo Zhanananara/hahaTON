@@ -1,6 +1,6 @@
 .active {
-  text-decoration: underline !important;
-  color: hotpink !important;
+  text-decoration: none !important;
+  color: grey !important;
 }
 .mobile-link {
   display: flex;
@@ -12,5 +12,5 @@
   color: #fff;
 }
 .navbar-container {
-  background: linear-gradient(to right, #ffa17f, #00223e);
+  background: black !important;
 }
