@@ -212,19 +212,6 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton> */}
-          <Typography
-            className="mui-link"
-            variant="h6"
-            noWrap
-            to="/"
-            component={RouterLink}
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            JS/FS 18
-          </Typography>
-
-          <Box sx={{ flexGrow: 1 }} />
-
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
               sx={{
@@ -267,6 +254,21 @@ export default function Navbar() {
             )}
           </Box>
 
+          {/* logo */}
+          <Box sx={{ flexGrow: 1 }}>
+            <Typography
+              className="mui-link"
+              variant="h6"
+              noWrap
+              to="/"
+              component={RouterLink}
+              sx={{
+                display: { xs: "block", sm: "block", md: "flex", mx: "auto" },
+              }}
+            >
+              CHANEL
+            </Typography>
+          </Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {/* <IconButton
               size="large"
