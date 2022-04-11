@@ -14,6 +14,7 @@ import Register from "./pages/Register";
 import RequireAuth from "./components/Auth/RequireAuth";
 import NoMatch from "./pages/NoMatch";
 import ProdDetail from "./pages/ProdDetail";
+import Card from "./pages/Card";
 
 const MyRoutes = () => {
   return (
@@ -22,11 +23,14 @@ const MyRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/admin" element={
-          <RequireAuth>
-        <Admin />
-          </RequireAuth>
-        }>
+        <Route
+          path="/admin"
+          element={
+            <RequireAuth>
+              <Admin />
+            </RequireAuth>
+          }
+        >
           <Route index element={<List />} />
           <Route path="add" element={<Add />} />
           <Route path="edit/:id" element={<Edit />} />
@@ -36,6 +40,7 @@ const MyRoutes = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/*" element={<NoMatch />} />
+        <Route path="/card" element={<Card />} />
       </Route>
     </Routes>
   );

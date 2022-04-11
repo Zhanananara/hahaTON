@@ -215,7 +215,7 @@ export default function Navbar() {
   );
 
   return (
-    <Box sx={{ position: "sticky", top: 0, right: 0, left: 0, zIndex: "+2" }}>
+    <Box sx={{ position: "sticky", top: 0, right: 0, left: 0, zIndex: "4" }}>
       <AppBar position="static" className="navbar-container">
         <Toolbar>
           {/* <IconButton
