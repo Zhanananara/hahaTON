@@ -1,3 +1,12 @@
 {
-  "products": []
+  "products": [
+    {
+      "title": "jacket",
+      "type": 10,
+      "price": 123,
+      "description": "its man jacket",
+      "img": "",
+      "id": 1
+    }
+  ]
 }
