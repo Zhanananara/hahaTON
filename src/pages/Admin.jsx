@@ -9,12 +9,13 @@ const Admin = () => {
   return (
     <div>
       <Container maxWidth="lg">
-        <h1>Admin page</h1>
-
+        <div style={{ display: "flex", flexDirection: "start" }}>
+          <h1>Admin page</h1>
+        </div>
         {pathname !== "/admin/add" ? (
           <Link to="add">
             <IconButton>
-              <AddCircleIcon fontSize="large" />
+              <AddCircleIcon fontSize="large" sx={{ color: "white" }} />
             </IconButton>
           </Link>
         ) : null}
