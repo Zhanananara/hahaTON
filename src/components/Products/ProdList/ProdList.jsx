@@ -7,6 +7,7 @@ import Spinner from "../../Spinner/Spinner";
 import OneProduct from "../OneProduct/OneProduct";
 import Pagination from "@mui/material/Pagination";
 import Filter from "../Filter/Filter";
+import "./ProdList.css";
 
 const maxSliderValue = 5000;
 const minSliderValue = 1;
@@ -74,7 +75,9 @@ const ProdList = () => {
   };
 
   return (
-    <div>
+    <div
+    // style={{ backgroundColor: "grey" }}
+    >
       <h2>Prod list</h2>
       <Filter
         setPage={setPage}
@@ -94,11 +97,17 @@ const ProdList = () => {
           <Spinner />
         )}
       </Grid>
-      <div style={{ margin: "50px 0", textAlign: "center" }}>
+      <div
+        style={{
+          margin: "50px 0",
+          textAlign: "center",
+          // backgroundColor: "lightgrey",
+          color: "white",
+        }}
+      >
         <Pagination
           count={pageTotalCount}
-          color="secondary"
-          sx={{ display: "inline-block" }}
+          sx={{ display: "inline-block", color: "white" }}
           onChange={(event, pageVal) => setPage(pageVal)}
           page={page}
         />

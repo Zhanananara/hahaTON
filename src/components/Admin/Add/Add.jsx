@@ -10,10 +10,12 @@ const Add = () => {
   const { addProduct } = useProductContext();
   return (
     <div>
-      <IconButton onClick={() => navigate(-1)}>
-        <ArrowBackIosNewIcon fontSize="large" />
-      </IconButton>
-      <h2>Add</h2>
+      <div style={{ display: "flex" }}>
+        <IconButton onClick={() => navigate(-1)}>
+          <ArrowBackIosNewIcon fontSize="large" sx={{ color: "white" }} />
+        </IconButton>
+        <h2>U can add a new product</h2>
+      </div>
       <Form saveValues={addProduct} compForEdit={false} />
     </div>
   );

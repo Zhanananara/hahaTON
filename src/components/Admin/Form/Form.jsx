@@ -6,6 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Button } from "@mui/material";
 import { useParams } from "react-router-dom";
+import "./Form.css";
 
 const initValues = {
   title: "",
@@ -50,36 +51,37 @@ const Form = ({ saveValues, compForEdit, forEditVal, getOneProduct }) => {
   };
 
   return (
-    <div>
-      <h2>Form</h2>
+    <div className="form-border">
       <form
         onSubmit={(e) => handleSubmit(e)}
         style={{
           display: "flex",
           flexDirection: "column",
+          // backgroundColor: "grey",
         }}
       >
         <TextField
           name="title"
           value={inpValues.title}
           onChange={(e) => handleChange(e)}
-          id="outlined-basic"
+          id="standard-basic"
           label="Title"
-          variant="outlined"
+          variant="standard"
+          sx={{ color: "white" }}
+          margin="normal"
         />
-        <FormControl fullWidth>
+        <FormControl fullWidth margin="normal">
           <InputLabel id="demo-simple-select-label">Type</InputLabel>
           <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
+            labelId="demo-simple-select-standard-label"
+            id="demo-simple-select-standard"
             name="type"
             value={inpValues.type}
             label="Type"
             onChange={(e) => handleChange(e)}
           >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={10}>Man</MenuItem>
+            <MenuItem value={20}>Woman</MenuItem>
           </Select>
         </FormControl>
         <TextField
@@ -87,29 +89,35 @@ const Form = ({ saveValues, compForEdit, forEditVal, getOneProduct }) => {
           name="price"
           value={inpValues.price}
           onChange={(e) => handleChange(e)}
-          id="outlined-basic"
+          id="standard-basic"
           label="Price"
-          variant="outlined"
+          variant="standard"
+          margin="normal"
         />
         <TextField
           name="img"
           value={inpValues.img}
           onChange={(e) => handleChange(e)}
-          id="outlined-basic"
+          id="standard-basic"
           label="Image"
-          variant="outlined"
+          variant="standard"
         />
         <TextField
           name="description"
           value={inpValues.description}
           onChange={(e) => handleChange(e)}
-          id="outlined-basic"
+          id="standard-basic"
           label="Description"
-          variant="outlined"
+          variant="standard"
           multiline
           rows={3}
+          margin="normal"
         />
-        <Button type="submit" variant="contained">
+        <Button
+          type="submit"
+          variant="contained"
+          sx={{ backgroundColor: "white" }}
+        >
           Submit
         </Button>
       </form>
