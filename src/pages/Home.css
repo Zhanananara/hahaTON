@@ -1,17 +1,24 @@
-.text {
-  z-index: 1;
-  font-size: 1rem;
+.video-bg {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.video-bg video {
+  height: 100vh;
+  width: 100%;
   position: absolute;
-  text-align: center;
-  margin: 2% 2%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 1;
 }
 
-.video {
-  opacity: 80%;
-  height: 100%;
-  width: 100%;
-  float: left;
-  top: 0;
-  padding: none;
-  position: fixed;
+.video-bg__content {
+  z-index: 2;
+  /* text-align: center; */
+  margin: 1% 15%;
 }
