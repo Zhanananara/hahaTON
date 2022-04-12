@@ -1,0 +1,10 @@
+.MuiPaginationItem-text {
+  color: white !important;
+}
+.Mui-selected {
+  color: black;
+}
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  transition: ease !important;
+  background-color: rgba(111, 111, 111, 0.8) !important;
+}

@@ -1,0 +1,74 @@
+.form-border {
+  border-top: 1px solid rgba(146, 146, 146, 1);
+}
+/* title */
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root {
+  color: #fff !important;
+}
+.css-1480iag-muiinputbase-root-muiinput-root {
+  border-bottom: 2px solid red !important;
+}
+/* underline(title,price,image */
+.css-1480iag-MuiInputBase-root-MuiInput-root:before {
+  border-bottom: 2px solid rgb(146, 146, 146) !important;
+}
+.css-1480iag-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 2px solid #fff !important;
+}
+/* underline end */
+/* if (title,price,image,description) empty */
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+  color: rgb(146, 146, 146) !important;
+}
+/* end if empty */
+/* if(title,price,image,description)full */
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #fff !important;
+}
+/* end if full */
+/* description underline */
+.css-5xn5lu-MuiInputBase-root-MuiInput-root:before {
+  border-bottom: 2px solid rgb(146, 146, 146) !important;
+}
+.css-5xn5lu-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 2px solid #fff !important;
+}
+/* description end */
+
+/* type text */
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  color: #fff !important;
+}
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #fff !important;
+}
+.css-bpeome-MuiSvgIcon-root-MuiSelect-icon {
+  color: fff !important;
+}
+
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-color: rgb(146, 146, 146) !important;
+}
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  color: #fff !important;
+}
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
+  color: rgb(146, 146, 146) !important;
+}
+/* type end */
+/* btn */
+.css-1frxlna-MuiButtonBase-root-MuiButton-root {
+  background-color: rgb(146, 146, 146) !important;
+}
+.css-1frxlna-MuiButtonBase-root-MuiButton-root:hover {
+  color: black;
+  background-color: #fff !important;
+}
+/* btn end */
+input {
+  color: white !important;
+}
