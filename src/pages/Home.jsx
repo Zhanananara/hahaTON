@@ -6,7 +6,6 @@ const Home = () => {
   return (
     <div>
       <div className="video-bg">
-        <h1>home</h1>
         <video
           src="https://www.chanel.com/videos/e_volume:mute/q_90,f_mp4,c_scale,w_2560,c_limit/FSH-1649166514894-handbags22combod.mp4"
           autoPlay
