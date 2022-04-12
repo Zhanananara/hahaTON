@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./pages.css";
 const Home = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "black", color: "white" }}>
       <div className="video-bg">
         <video
           src="https://www.chanel.com/videos/e_volume:mute/q_90,f_mp4,c_scale,w_2560,c_limit/FSH-1649166514894-handbags22combod.mp4"

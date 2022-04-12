@@ -73,8 +73,8 @@ const ProdList = () => {
   };
 
   return (
-    <div className="prod-list">
-      <h2>Prod list</h2>
+    <div style={{ marginTop: 40 }}>
+      {/* <h2>Prod list</h2> */}
       <Filter
         setPage={setPage}
         type={type}

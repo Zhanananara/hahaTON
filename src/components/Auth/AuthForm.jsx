@@ -79,6 +79,7 @@ export default function AuthForm({
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              backgroundColor: "white",
             }}
           >
             <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
@@ -102,6 +103,7 @@ export default function AuthForm({
                 name="email"
                 autoComplete="email"
                 autoFocus
+                sx={{ color: "black" }}
               />
               <TextField
                 margin="normal"
