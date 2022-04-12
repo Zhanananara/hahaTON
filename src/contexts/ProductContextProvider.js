@@ -52,7 +52,7 @@ const ProductContextProvider = ({ children }) => {
   const addProduct = async (newProduct) => {
     try {
       let res = await axios.post(API, newProduct);
-      notify("success", `Продукт ${newProduct.title} был успешно добавлен!`);
+      notify("success", `Products ${newProduct.title} был успешно добавлен!`);
       navigate("/admin");
     } catch (err) {
       notifyError(err);
@@ -84,7 +84,7 @@ const ProductContextProvider = ({ children }) => {
   const saveEditedProd = async (editedProd) => {
     try {
       let res = await axios.patch(`${API}/${editedProd.id}`, editedProd);
-      notify("info", `Продук ${editedProd.title} был успешно обновлен`);
+      notify("info", `Продукт ${editedProd.title} был успешно обновлен`);
       getProducts();
       navigate("/admin");
     } catch (err) {
