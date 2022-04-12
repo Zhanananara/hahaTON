@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "title": "jacket",
-      "type": 10,
+      "title": "nardin",
+      "type": "watches",
       "price": 123,
-      "description": "its man jacket",
-      "img": "",
+      "description": "msanglanglasng",
+      "img": "123",
       "id": 1
     }
   ]

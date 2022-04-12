@@ -9,7 +9,7 @@ import Pagination from "@mui/material/Pagination";
 import Filter from "../Filter/Filter";
 import "./ProdList.css";
 
-const maxSliderValue = 5000;
+const maxSliderValue = 1000;
 const minSliderValue = 1;
 
 const ProdList = () => {

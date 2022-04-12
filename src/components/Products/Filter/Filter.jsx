@@ -1,11 +1,64 @@
 import React from "react";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 import Slider from "@mui/material/Slider";
 import { Button, Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
+
+const iOSBoxShadow =
+  "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)";
+
+const IOSSlider = styled(Slider)(({ theme }) => ({
+  color: theme.palette.mode === "dark" ? "#3880ff" : "#3880ff",
+  height: 2,
+  padding: "15px 0",
+  "& .MuiSlider-thumb": {
+    height: 28,
+    width: 28,
+    backgroundColor: "#fff",
+    boxShadow: iOSBoxShadow,
+    "&:focus, &:hover, &.Mui-active": {
+      boxShadow:
+        "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)",
+      // Reset on touch devices, it doesn't add specificity
+      "@media (hover: none)": {
+        boxShadow: iOSBoxShadow,
+      },
+    },
+  },
+  "& .MuiSlider-valueLabel": {
+    fontSize: 12,
+    fontWeight: "normal",
+    top: -6,
+    backgroundColor: "unset",
+    color: theme.palette.text.primary,
+    "&:before": {
+      display: "none",
+    },
+    "& *": {
+      background: "transparent",
+      color: theme.palette.mode === "dark" ? "#000" : "#fff",
+    },
+  },
+  "& .MuiSlider-track": {
+    border: "none",
+  },
+  "& .MuiSlider-rail": {
+    opacity: 0.5,
+    backgroundColor: "#bfbfbf",
+  },
+  "& .MuiSlider-mark": {
+    backgroundColor: "grey",
+    height: 8,
+    width: 1,
+    "&.MuiSlider-markActive": {
+      opacity: 1,
+      backgroundColor: "currentColor",
+    },
+  },
+}));
 
 const Filter = ({
   type,
@@ -18,41 +71,60 @@ const Filter = ({
   handleReset,
 }) => {
   return (
-    <div style={{ textAlign: "center" }}>
-      <FormControl>
-        <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
-        <RadioGroup
-          aria-labelledby="demo-radio-buttons-group-label"
-          defaultValue="female"
-          name="radio-buttons-group"
-          value={type}
-          onChange={(e) => {
-            setType(e.target.value);
+    <div
+      style={{
+        textAlign: "center",
+        display: "flex",
+        // backgroundColor: "grey",
+        justifyContent: "space-around",
+      }}
+    >
+      <Box sx={{ minWidth: 120 }}>
+        <FormControl fullWidth>
+          <Select
+            aria-labelledby="demo-radio-buttons-group-label"
+            defaultValue="female"
+            name="radio-buttons-group"
+            value={type}
+            onChange={(e) => {
+              setType(e.target.value);
+              setPage(1);
+            }}
+          >
+            <MenuItem value="all" label="All">
+              All
+            </MenuItem>
+            <MenuItem value="fragrance" label="Fragrance">
+              Fragrance
+            </MenuItem>
+            <MenuItem value="watches" label="Watches">
+              Watches
+            </MenuItem>
+            <MenuItem value="makeup" label="Makeup">
+              Makeup
+            </MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+
+      {/* new type */}
+
+      <br />
+      <br />
+      <Box sx={{ minWidth: 220 }}>
+        <IOSSlider
+          sx={{ maxWidth: "350px" }}
+          value={slider}
+          onChange={(e, newValue) => {
+            setSlider(newValue);
             setPage(1);
           }}
-        >
-          <FormControlLabel value="all" control={<Radio />} label="All" />
-          <FormControlLabel value="10" control={<Radio />} label="Ten" />
-          <FormControlLabel value="20" control={<Radio />} label="Twenty" />
-          <FormControlLabel value="30" control={<Radio />} label="Thirty" />
-        </RadioGroup>
-      </FormControl>
-
-      <br />
-      <br />
-      <Typography color="text.secondary">Price</Typography>
-      <Slider
-        sx={{ maxWidth: "350px" }}
-        value={slider}
-        onChange={(e, newValue) => {
-          setSlider(newValue);
-          setPage(1);
-        }}
-        valueLabelDisplay="auto"
-        max={maxSliderValue}
-        min={minSliderValue}
-      />
-
+          valueLabelDisplay="auto"
+          max={maxSliderValue}
+          min={minSliderValue}
+        />
+        {/* <Typography color="white">Price</Typography> */}
+      </Box>
       <br />
       <Button onClick={handleReset} variant="outlined">
         Reset

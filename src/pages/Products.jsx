@@ -4,7 +4,7 @@ import ProdList from "../components/Products/ProdList/ProdList";
 
 const Products = () => {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
       <ProdList />
     </Container>
   );
