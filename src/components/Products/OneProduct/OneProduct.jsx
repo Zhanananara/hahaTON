@@ -23,21 +23,22 @@ export default function OneProduct({ item }) {
   const [inCart, setInCart] = React.useState(isProdInCart(item.id));
 
   return (
-    <Grid
-      item
-      xs={12}
-      // sm={6}
-      md={6}
-    >
-      <Card sx={{ maxWidth: 500, height: 400 }}>
+    <Grid item xs={12} sm={6} md={6}>
+      <Card
+        sx={{
+          height: 500,
+          maxWidth: "lg",
+          margin: "auto",
+        }}
+      >
         <CardHeader title={item.title} variant="h6" />
         <CardMedia
           component="img"
-          height="200"
+          height="300"
           image={item.img}
           alt={item.title}
         />
-        <CardContent>
+        <CardContent sx={{}}>
           {/* <Typography gutterBottom variant="h5" component="div">
             {item.title}
           </Typography> */}

@@ -81,8 +81,9 @@ const Form = ({ saveValues, compForEdit, forEditVal, getOneProduct }) => {
             label="Type"
             onChange={(e) => handleChange(e)}
           >
-            <MenuItem value={10}>Man</MenuItem>
-            <MenuItem value={20}>Woman</MenuItem>
+            <MenuItem value={"fragrance"}>Fragrance</MenuItem>
+            <MenuItem value={"watches"}>Watches</MenuItem>
+            <MenuItem value={"makeup"}>Makeup</MenuItem>
           </Select>
         </FormControl>
         <TextField

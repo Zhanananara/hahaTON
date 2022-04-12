@@ -1,17 +1,18 @@
 import { Button } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
 import { Link } from "react-router-dom";
 import { notify } from "../components/Toastify/Toastify";
-const Card = () => {
-  const [data, setData] = useState({
+export default class PaymentForm extends React.Component {
+  state = {
     cvc: "",
     expiry: "",
     focus: "",
     name: "",
     number: "",
-  });
+  };
+
   handleInputFocus = (e) => {
     this.setState({ focus: e.target.name });
   };
@@ -22,10 +23,8 @@ const Card = () => {
     this.setState({ [name]: value });
   };
 
-  function handleSubmit() {
-    if (!data.cvc || !data.expiry || !data.name || !data.number) {
-      alert("wrong");
-    } else {
+  render() {
+    function payCard() {
       notify("success", "Order successfully completed");
     }
     return (
@@ -83,7 +82,7 @@ const Card = () => {
           />
           <Link to="/">
             <Button
-              onClick={() => handleSubmit()}
+              onClick={() => payCard()}
               style={{ color: "white" }}
               variant="contained"
               color="grey"
@@ -95,5 +94,4 @@ const Card = () => {
       </div>
     );
   }
-};
-export default Card;
+}

@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "title": "jacket",
-      "type": 10,
+      "title": "nardin",
+      "type": "watches",
       "price": 123,
-      "description": "its man jacket",
-      "img": "",
+      "description": "msanglanglasng",
+      "img": "123",
       "id": 1
     },
     {
@@ -31,6 +31,14 @@
       "description": "",
       "img": "jjsjjjs",
       "id": 4
+    },
+    {
+      "title": "N°5",
+      "type": "fragrance",
+      "price": 146,
+      "description": "Eau de Parfum Spray",
+      "img": "https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/n-5-eau-de-parfum-spray-3-4fl-oz--packshot-default-125530-8848376856606.jpg",
+      "id": 5
     }
   ]
 }
