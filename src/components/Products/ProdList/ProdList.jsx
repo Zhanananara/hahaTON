@@ -41,7 +41,6 @@ const ProdList = () => {
     };
   };
 
-  // Чтобы в самом начале рождения компонента установить query params == параметры запроса, и именно по ним делать запрос getProducts()
   useEffect(() => {
     if (searchParams.get("type")) {
       setSearchParams(paramsWithType());
@@ -50,7 +49,6 @@ const ProdList = () => {
     }
   }, []);
 
-  // отрабатывает каждый раз, как меняется query params == параметры запроса
   useEffect(() => {
     getProducts();
   }, [searchParams]);
@@ -75,9 +73,7 @@ const ProdList = () => {
   };
 
   return (
-    <div
-    // style={{ backgroundColor: "grey" }}
-    >
+    <div className="prod-list">
       <h2>Prod list</h2>
       <Filter
         setPage={setPage}
@@ -90,18 +86,18 @@ const ProdList = () => {
         handleReset={handleReset}
       />
       <br />
-      <Grid container spacing={2}>
+      <Grid container spacing={1} item xs={12} md={6} sx={{ display: "flex" }}>
         {products && products.length > 0 ? (
           products.map((item) => <OneProduct key={item.id} item={item} />)
         ) : (
           <Spinner />
         )}
       </Grid>
+
       <div
         style={{
           margin: "50px 0",
           textAlign: "center",
-          // backgroundColor: "lightgrey",
           color: "white",
         }}
       >

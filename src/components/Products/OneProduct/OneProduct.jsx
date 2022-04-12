@@ -23,8 +23,13 @@ export default function OneProduct({ item }) {
   const [inCart, setInCart] = React.useState(isProdInCart(item.id));
 
   return (
-    <Grid item xs={12} sm={6} md={4}>
-      <Card sx={{ maxWidth: 345, height: 400 }}>
+    <Grid
+      item
+      xs={12}
+      // sm={6}
+      md={6}
+    >
+      <Card sx={{ maxWidth: 500, height: 400 }}>
         <CardHeader title={item.title} variant="h6" />
         <CardMedia
           component="img"

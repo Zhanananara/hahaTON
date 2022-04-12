@@ -85,7 +85,10 @@ const Cart = () => {
 
                         <IconButton
                           onClick={() =>
-                            changeProductCount(elem.count - 1, elem.item.id)
+                            changeProductCount(
+                              elem.count > 0 ? elem.count - 1 : elem.count,
+                              elem.item.id
+                            )
                           }
                         >
                           <RemoveIcon />
@@ -107,7 +110,11 @@ const Cart = () => {
             <Typography variant="h4">
               Total price: ${cart.totalPrice}
             </Typography>
-            <Button variant="contained">BUY NOW FOR ${cart.totalPrice}</Button>
+            <Link to="/card">
+              <Button variant="contained">
+                BUY NOW FOR ${cart.totalPrice}
+              </Button>
+            </Link>
           </>
         ) : (
           <div style={{ textAlign: "center" }}>

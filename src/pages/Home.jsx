@@ -33,19 +33,18 @@ const Home = () => {
           loop
         ></video>
       </div>
-      <div className="image-bg1">
-        {/* <img
+      <div className="image-bg">
+        <img
           width="100%"
           src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_2560/FSH-1649174599213-desktopwp02.png"
           alt=""
-        /> */}
-        <div className="button">
-          <Link to="/products">
-            <Button style={{ color: "white" }} variant="outlined">
-              See more chanel products
-            </Button>
-          </Link>
-        </div>
+        />
+
+        <Link to="/products">
+          <Button style={{ color: "white" }} variant="outlined">
+            See more chanel products
+          </Button>
+        </Link>
       </div>
 
       <div className="video-bg">
@@ -61,19 +60,18 @@ const Home = () => {
           functional pieces and tend to travel with my life in my bag.”
         </p>
       </div>
-      <div className="image-bg2">
-        {/* <img
+      <div className="image-bg">
+        <img
           width="100%"
           src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_2560/FSH-1646820630589-desktoplrd01.png"
           alt=""
-        /> */}
-        <div className="button">
-          <Link to="/products">
-            <Button style={{ color: "white" }} variant="outlined">
-              See more chanel products
-            </Button>
-          </Link>
-        </div>
+        />
+
+        <Link to="/products">
+          <Button style={{ color: "white" }} variant="outlined">
+            See more chanel products
+          </Button>
+        </Link>
       </div>
     </div>
   );
