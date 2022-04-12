@@ -1,10 +1,8 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import CardHeader from "@mui/material/CardHeader";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Grid, IconButton } from "@mui/material";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
@@ -30,8 +28,13 @@ export default function OneProduct({ item }) {
           maxWidth: "lg",
           margin: "auto",
         }}
+        elevation={24}
       >
-        <CardHeader title={item.title} variant="h6" />
+        <CardHeader
+          title={item.title}
+          variant="h6"
+          sx={{ margin: " 0 auto", textAlign: "center" }}
+        />
         <CardMedia
           component="img"
           height="300"
