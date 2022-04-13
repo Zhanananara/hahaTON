@@ -15,7 +15,7 @@ export const FAV = {
   GET_FAV: "GET_FAV",
 };
 
-export const PRODUCTS_LIMIT = 2;
+export const PRODUCTS_LIMIT = 4;
 
 export const ADMIN_EMAIL = "admin@admin.com";
 // admin123

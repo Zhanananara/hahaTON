@@ -8,6 +8,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import { Grid } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
+import emptyCart from "../img/empty-cart.png";
 
 const Fav = () => {
   const { fav, getFav, deleteProdInFav } = useFav();
@@ -81,15 +82,11 @@ const Fav = () => {
                 ))}
               </>
             ) : (
-              <div style={{ textAlign: "center" }}>
-                <img
-                  width="25%"
-                  src="https://thumbs.dreamstime.com/z/girl-beautiful-dress-supermarket-9827992.jpg"
-                  alt=""
-                />
+              <div style={{ textAlign: "center", marginBottom: "20px" }}>
+                <img width="100%" src={emptyCart} alt="" />
                 <br />
                 <Button variant="contained" component={Link} to="/products">
-                  GO to products
+                  Go shopping
                 </Button>
               </div>
             )}

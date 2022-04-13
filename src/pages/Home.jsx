@@ -41,7 +41,7 @@ const Home = () => {
         />
 
         <Link to="/products">
-          <Button style={{ color: "white" }} variant="outlined">
+          <Button className="btn" style={{ color: "white" }} variant="outlined">
             See more chanel products
           </Button>
         </Link>
@@ -68,7 +68,7 @@ const Home = () => {
         />
 
         <Link to="/products">
-          <Button style={{ color: "white" }} variant="outlined">
+          <Button className="btn" style={{ color: "white" }} variant="outlined">
             See more chanel products
           </Button>
         </Link>
