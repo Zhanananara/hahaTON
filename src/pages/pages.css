@@ -85,3 +85,14 @@
 #PaymentForm {
   margin: 4vh;
 }
+.home {
+  text-decoration: none !important;
+}
+.css-1rwt2y5-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: #ffffff !important;
+  border: 1px solid black !important;
+  text-decoration: none !important;
+}
+.prodDetail {
+  display: flex;
+}

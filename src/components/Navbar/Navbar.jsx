@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link as RouterLink, NavLink } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,7 +11,6 @@ import Menu from "@mui/material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Button } from "@mui/material";
-import { Link as RouterLink, NavLink } from "react-router-dom";
 import InfoIcon from "@mui/icons-material/Info";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LiveSearch from "../LiveSearch/LiveSearch";
@@ -193,6 +193,29 @@ export default function Navbar() {
           </p>
         </RouterLink>
       </MenuItem>
+      {/* FAV */}
+      <MenuItem>
+        <RouterLink to="/fav" className="mobile-link">
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-haspopup="true"
+            color="inherit"
+          >
+            <Badge badgeContent={+favLength} color="error">
+              <ShoppingCartIcon />
+            </Badge>
+          </IconButton>
+          <p
+            style={{
+              marginTop: "10px",
+            }}
+          >
+            Favorites
+          </p>
+        </RouterLink>
+      </MenuItem>
+
       {/* material */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton

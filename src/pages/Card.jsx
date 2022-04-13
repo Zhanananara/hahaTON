@@ -2,7 +2,6 @@ import { Button } from "@mui/material";
 import React from "react";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
-import { Link } from "react-router-dom";
 import { notify } from "../components/Toastify/Toastify";
 export default class PaymentForm extends React.Component {
   state = {
