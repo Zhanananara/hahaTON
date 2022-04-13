@@ -117,7 +117,7 @@ const Cart = () => {
             </Link>
           </>
         ) : (
-          <div style={{ textAlign: "center", marginBottom: "20px" }}>
+          <div style={{ textAlign: "center", marginBottom: "30px" }}>
             <img width="100%" src={emptyCart} alt="" />
             <br />
             <Button variant="contained" component={Link} to="/products">

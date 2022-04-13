@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link as RouterLink, NavLink } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,8 +11,6 @@ import Menu from "@mui/material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Button } from "@mui/material";
-import { Link as RouterLink, NavLink } from "react-router-dom";
-import InfoIcon from "@mui/icons-material/Info";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LiveSearch from "../LiveSearch/LiveSearch";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
@@ -21,6 +20,8 @@ import { useAuth } from "../../contexts/AuthContextProvider";
 import PersonIcon from "@mui/icons-material/Person";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import { useFav } from "../../contexts/FavContextProvider";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -133,7 +134,7 @@ export default function Navbar() {
             aria-label="account of current user"
             color="inherit"
           >
-            <InfoIcon />
+            <ImportContactsIcon />
           </IconButton>
           <p>About</p>
         </NavLink>
@@ -145,7 +146,7 @@ export default function Navbar() {
             aria-label="account of current user"
             color="inherit"
           >
-            <InfoIcon />
+            <LocalOfferIcon />
           </IconButton>
           <p>Products</p>
         </NavLink>
@@ -157,7 +158,13 @@ export default function Navbar() {
             aria-label="account of current user"
             color="inherit"
           >
-            <InfoIcon />
+            {currentUser?.isAdmin ? (
+              <AdminPanelSettingsIcon />
+            ) : currentUser?.isLogged ? (
+              <PersonIcon />
+            ) : (
+              <AccountCircle />
+            )}
           </IconButton>
           <p>Admin</p>
         </NavLink>
@@ -193,6 +200,29 @@ export default function Navbar() {
           </p>
         </RouterLink>
       </MenuItem>
+      {/* FAV */}
+      <MenuItem>
+        <RouterLink to="/fav" className="mobile-link">
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-haspopup="true"
+            color="inherit"
+          >
+            <Badge badgeContent={+favLength} color="error">
+              <ShoppingCartIcon />
+            </Badge>
+          </IconButton>
+          <p
+            style={{
+              marginTop: "10px",
+            }}
+          >
+            Favorites
+          </p>
+        </RouterLink>
+      </MenuItem>
+
       {/* material */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton

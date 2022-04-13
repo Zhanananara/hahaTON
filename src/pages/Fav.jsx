@@ -18,80 +18,88 @@ const Fav = () => {
 
   return (
     <div>
-      <Container maxWidth="lg">
+      <Container maxWidth="xl" xs={12} sm={6} md={6}>
         <h1>Favorite</h1>
-        <Box>
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={6}
-            sx={{ display: "flex", marginBottom: "10px" }}
-          >
-            {fav?.products.length > 0 ? (
-              <>
-                {/* new fav */}
-                {fav.products.map((elem) => (
-                  <Card
-                    sx={{ display: "flex", marginRight: "10px" }}
-                    key={elem.item.id}
-                  >
-                    <Box sx={{ display: "flex", flexDirection: "column" }}>
-                      <CardContent sx={{ flex: "1 0 auto" }}>
-                        <Typography component="div" variant="h5">
-                          {elem.item.title}
-                        </Typography>
-                        <Typography
-                          variant="subtitle1"
-                          color="text.secondary"
-                          component="div"
-                        >
-                          {elem.item.type}
-                        </Typography>
-                      </CardContent>
-                      <Box
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          pl: 1,
-                          pb: 1,
-                        }}
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={6}
+          sx={{
+            display: "flex",
+            marginBottom: "10px",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+          }}
+        >
+          {fav?.products.length > 0 ? (
+            <>
+              {/* new fav */}
+              {fav.products.map((elem) => (
+                <Card
+                  elevation={24}
+                  sx={{
+                    display: "flex",
+                    marginRight: "10px",
+                    width: 400,
+                    height: 300,
+                    margin: "20px auto",
+                  }}
+                  key={elem.item.id}
+                >
+                  <Box sx={{ display: "flex", flexDirection: "column" }}>
+                    <CardContent sx={{ flex: "1 0 auto" }}>
+                      <Typography component="div" variant="h5">
+                        {elem.item.title}
+                      </Typography>
+                      <Typography
+                        variant="subtitle1"
+                        color="text.secondary"
+                        component="div"
                       >
-                        <IconButton
-                          onClick={() => deleteProdInFav(elem.item.id)}
-                        >
-                          <DeleteIcon />
-                        </IconButton>
-                        <IconButton
-                          component={Link}
-                          to={`/products/detail/${elem.item.id}`}
-                          label="detail"
-                          value="detail"
-                        >
-                          <ReadMoreIcon />
-                        </IconButton>
-                      </Box>
+                        {elem.item.type}
+                      </Typography>
+                    </CardContent>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        pl: 1,
+                        pb: 1,
+                      }}
+                    >
+                      <IconButton onClick={() => deleteProdInFav(elem.item.id)}>
+                        <DeleteIcon />
+                      </IconButton>
+                      <IconButton
+                        component={Link}
+                        to={`/products/detail/${elem.item.id}`}
+                        label="detail"
+                        value="detail"
+                      >
+                        <ReadMoreIcon />
+                      </IconButton>
                     </Box>
-                    <CardMedia
-                      component="img"
-                      sx={{ width: 151 }}
-                      src={elem.item.img}
-                      alt={elem.item.title}
-                    />
-                  </Card>
-                ))}
-              </>
-            ) : (
-              <div style={{ textAlign: "center", marginBottom: "20px" }}>
-                <img width="100%" src={emptyCart} alt="" />
-                <br />
-                <Button variant="contained" component={Link} to="/products">
-                  Go shopping
-                </Button>
-              </div>
-            )}
-          </Grid>
-        </Box>
+                  </Box>
+                  <CardMedia
+                    component="img"
+                    sx={{ width: 151 }}
+                    src={elem.item.img}
+                    alt={elem.item.title}
+                  />
+                </Card>
+              ))}
+            </>
+          ) : (
+            <div style={{ textAlign: "center", marginBottom: "20px" }}>
+              <img width="100%" src={emptyCart} alt="" />
+              <br />
+              <Button variant="contained" component={Link} to="/products">
+                Go shopping
+              </Button>
+            </div>
+          )}
+        </Grid>
       </Container>
     </div>
   );

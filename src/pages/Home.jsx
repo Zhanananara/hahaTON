@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./pages.css";
 const Home = () => {
   return (
-    <div style={{ backgroundColor: "black", color: "white" }}>
+    <div style={{ backgroundColor: "black", color: "white" }} className="home">
       <div className="video-bg">
         <video
           src="https://www.chanel.com/videos/e_volume:mute/q_90,f_mp4,c_scale,w_2560,c_limit/FSH-1649166514894-handbags22combod.mp4"
@@ -12,7 +12,7 @@ const Home = () => {
           loop
         ></video>
         <div className="video-bg__content">
-          <h2> THE CHANEL 22 BAG</h2>
+          <h3> THE CHANEL 22 BAG</h3>
           <p>
             In the sagacity of cities, the plenitude of open spaces or the
             daydream of a villa, CHANEL ambassadors Whitney Peak, Margaret
@@ -33,15 +33,19 @@ const Home = () => {
           loop
         ></video>
       </div>
-      <div className="image-bg">
+      <div className="image-bg bg-1">
         <img
           width="100%"
           src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_2560/FSH-1649174599213-desktopwp02.png"
           alt=""
         />
-
         <Link to="/products">
-          <Button className="btn" style={{ color: "white" }} variant="outlined">
+          <Button
+            className="btn"
+            style={{ color: "white" }}
+            variant="outlined"
+            size="large"
+          >
             See more chanel products
           </Button>
         </Link>
@@ -68,7 +72,12 @@ const Home = () => {
         />
 
         <Link to="/products">
-          <Button className="btn" style={{ color: "white" }} variant="outlined">
+          <Button
+            className="btn"
+            style={{ color: "white" }}
+            variant="outlined"
+            size="large"
+          >
             See more chanel products
           </Button>
         </Link>

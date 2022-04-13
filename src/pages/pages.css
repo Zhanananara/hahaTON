@@ -3,7 +3,7 @@
 }
 
 .post {
-  margin: 1% 15%;
+  margin: 1% 10%;
 }
 
 .image {
@@ -33,7 +33,7 @@
 .video-bg__content {
   z-index: 2;
   text-align: center;
-  margin: 1% 25%;
+  margin: 1% 5%;
   font-size: 1.2rem;
 }
 
@@ -43,7 +43,7 @@
 
 .text_content {
   max-width: 1400px;
-  margin: 20vh auto;
+  margin: 5vw auto;
   padding: 0 20px;
   font-size: 2rem;
   text-align: center;
@@ -80,7 +80,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 #PaymentForm {
   margin: 4vh;
+}
+.home {
+  text-decoration: none !important;
+}
+.css-1rwt2y5-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: #ffffff !important;
+  border: 1px solid black !important;
+  text-decoration: none !important;
+}
+.prodDetail {
+  display: flex;
 }
