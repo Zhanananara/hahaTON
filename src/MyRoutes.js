@@ -15,6 +15,7 @@ import RequireAuth from "./components/Auth/RequireAuth";
 import NoMatch from "./pages/NoMatch";
 import ProdDetail from "./pages/ProdDetail";
 import Card from "./pages/Card";
+import Fav from "./pages/Fav";
 
 const MyRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const MyRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/fav" element={<Fav />} />
         <Route
           path="/admin"
           element={

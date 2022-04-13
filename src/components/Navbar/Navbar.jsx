@@ -7,22 +7,20 @@ import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Button } from "@mui/material";
 import { Link as RouterLink, NavLink } from "react-router-dom";
 import InfoIcon from "@mui/icons-material/Info";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LiveSearch from "../LiveSearch/LiveSearch";
-
+import BookmarksIcon from "@mui/icons-material/Bookmarks";
 import "./Navbar.css";
 import { useCart } from "../../contexts/CartContextProvider";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import PersonIcon from "@mui/icons-material/Person";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import { useFav } from "../../contexts/FavContextProvider";
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -30,6 +28,11 @@ export default function Navbar() {
 
   const { currentUser, logOutUser } = useAuth();
   const { getCartLength, cartLength } = useCart();
+  const { getFavLength, favLength } = useFav();
+
+  React.useEffect(() => {
+    getFavLength();
+  }, []);
 
   React.useEffect(() => {
     getCartLength();
@@ -285,7 +288,7 @@ export default function Navbar() {
               },
               width: "100%",
               justifyContent: "center",
-              paddingLeft: 20,
+
               fontSize: "2.5rem",
               fontWeight: "500",
               textTransform: "uppercase",
@@ -311,6 +314,21 @@ export default function Navbar() {
               >
                 <Badge badgeContent={+cartLength} color="error">
                   <ShoppingCartIcon />
+                </Badge>
+              </IconButton>
+            </RouterLink>
+
+            {/* fav */}
+            <RouterLink to="/fav" style={{ color: "white" }}>
+              <IconButton
+                size="large"
+                edge="end"
+                aria-label="account of current user"
+                aria-haspopup="true"
+                color="inherit"
+              >
+                <Badge badgeContent={+favLength} color="error">
+                  <BookmarksIcon />
                 </Badge>
               </IconButton>
             </RouterLink>

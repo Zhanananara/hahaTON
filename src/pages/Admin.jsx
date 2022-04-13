@@ -15,7 +15,7 @@ const Admin = () => {
         {pathname !== "/admin/add" ? (
           <Link to="add">
             <IconButton>
-              <AddCircleIcon fontSize="large" sx={{ color: "white" }} />
+              <AddCircleIcon fontSize="large" sx={{ color: "black" }} />
             </IconButton>
           </Link>
         ) : null}

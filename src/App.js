@@ -4,16 +4,19 @@ import MyRoutes from "./MyRoutes";
 import Toastify from "./components/Toastify/Toastify";
 import CartContextProvider from "./contexts/CartContextProvider";
 import AuthContextProvider from "./contexts/AuthContextProvider";
+import FavContextProvider from "./contexts/FavContextProvider";
 
 function App() {
   return (
     <AuthContextProvider>
-    <CartContextProvider>
-      <ProductContextProvider>
-        <Toastify />
-        <MyRoutes />
-      </ProductContextProvider>
-    </CartContextProvider>
+      <FavContextProvider>
+        <CartContextProvider>
+          <ProductContextProvider>
+            <Toastify />
+            <MyRoutes />
+          </ProductContextProvider>
+        </CartContextProvider>
+      </FavContextProvider>
     </AuthContextProvider>
   );
 }
