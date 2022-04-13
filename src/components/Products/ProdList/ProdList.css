@@ -8,3 +8,7 @@
   transition: ease !important;
   background-color: rgba(111, 111, 111, 0.8) !important;
 }
+
+.prod-list {
+  background: linear-gradient(to right, #000000, #434343);
+}

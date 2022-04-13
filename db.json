@@ -1,20 +1,180 @@
 {
   "products": [
     {
-      "title": "nardin",
-      "type": "watches",
-      "price": 123,
-      "description": "msanglanglasng",
-      "img": "https://www.photoop.it/wp-content/uploads/2017/12/101-Chanel-Roll-3-Frame-12.jpg",
-      "id": 1
+      "title": "N°5",
+      "type": "fragrance",
+      "price": 146,
+      "description": "Eau de Parfum Spray",
+      "img": "https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/n-5-eau-de-parfum-spray-3-4fl-oz--packshot-default-125530-8848376856606.jpg",
+      "id": 5
     },
     {
-      "title": "hi",
+      "title": "N°5",
+      "type": "fragrance",
+      "price": 60,
+      "description": "The Shower Gel\n",
+      "img": "https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/n-5-the-shower-gel-6-8fl-oz--packshot-default-105768-8835354099742.jpg",
+      "id": 6
+    },
+    {
+      "title": "N°5",
+      "type": "fragrance",
+      "price": 125,
+      "description": "Powerful top notes, dominated by ylang-ylang and neroli, are enhanced by aldehydes. At the very heart of the fragrance is the fullness of a magnificent rose and jasmine floral accord. A base of vanilla, vetiver and sandalwood creates a warm, dynamic sillage.",
+      "img": "https://www.chanel.com/images//t_one//w_0.55,h_0.55,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/n-5-eau-de-toilette-spray-3-4fl-oz--packshot-default-105467-8833875804190.jpg",
+      "id": 7
+    },
+    {
+      "title": "CHANCE EAU TENDRE",
+      "type": "fragrance",
+      "price": 146,
+      "description": "A dazzling constellation of notes is intensified by jasmine absolute and rose essence. An intoxicatingly soft and enveloping trail unfurls for a radiant and feminine scent.\n\n",
+      "img": "https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/chance-eau-tendre-eau-de-parfum-spray-3-4fl-oz--packshot-default-126260-8848377511966.jpg",
+      "id": 8
+    },
+    {
+      "title": "ROUGE ALLURE INK",
+      "type": "makeup",
+      "price": 42,
+      "description": "Polymers, waxes and plant oils smooth and nourish lips, while Jojoba Oil and a unique anti-oxidant complex offer hydration and protective benefits. The applicator tip allows for comfortable and easy application. In a provocative range of red-tint shades, from tart pink to deep brown-noir.",
+      "img": "https://www.chanel.com/images//t_one//w_0.38,h_0.38,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/rouge-allure-ink-matte-liquid-lip-colour-234-evocation-0-2fl-oz--packshot-default-165234-8846890598430.jpg",
+      "id": 9
+    },
+    {
+      "title": "ROUGE COCO FLASH",
+      "type": "makeup",
+      "price": 42,
+      "description": "The intensely pigmented formula features an innovative blend of oils to moisturize and glide smoothly onto lips. All in an innovative ROUGE COCO case, reinvented with a transparent cap so you can easily choose your shade",
+      "img": "https://www.chanel.com/images//t_one//w_0.38,h_0.38,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/rouge-coco-flash-hydrating-vibrant-shine-lip-colour-168-halo-0-11oz--packshot-default-174168-8846890565662.jpg",
+      "id": 10
+    },
+    {
+      "title": "ROUGE ALLURE L’EXTRAIT",
+      "type": "makeup",
+      "price": 55,
+      "description": "The formula offers up to 12 hours of hydration**, up to 10 hours of protection*** and all-day comfort, thanks to nourishing waxes and ume flower extract, which form a deeply moisturizing complex. A combination of powders and a plant-derived oil chosen for its strong light-reflecting powers delivers infinitely luminous colour. The distinctive thin shape of the lipstick itself allows for ultra-precise application in a single swipe. All in the signature ROUGE ALLURE click case, reinvented in a sleek format.\n\n",
+      "img": "https://www.chanel.com/images//t_one//w_0.38,h_0.38,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/high-intensity-lip-colour-br-concentrated-radiance-and-care-br-refillable-854-0-07oz--packshot-default-163854-8851339542558.jpg",
+      "id": 11
+    },
+    {
+      "title": "J12 CALIBER 12.2 EDITION 1 WATCH, 33 MM",
       "type": "watches",
-      "price": 123,
-      "description": "asfa",
-      "img": "",
-      "id": 2
+      "price": 999,
+      "description": "materials\nWhite ceramic\nSteel\nDiamond\n\ncase\nWhite highly resistant ceramic and steel case\n\nbezel\nSteel fixed bezel with white-varnished baguette pattern sapphire crystal\n\ndial\nWhite-lacquered dial with tone-on-tone ceramic indicators\n\ncrown\nSteel non screw-down crown set with 1 brilliant-cut diamond (~0.11 carat)\n\nstrap\nWhite highly resistant ceramic bracelet and steel triple-folding buckle\n\nmovement\nSelf-winding mechanical movement\n\nwater-resistance\n50 m\n\ncaliber\nCaliber 12.2",
+      "img": "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/j12-caliber-12-2-edition-1-watch-33-mm-white-white-ceramic-steel-diamond-packshot-default-h6785-8845512966174.jpg",
+      "id": 12
+    },
+    {
+      "title": "J12 CALIBER 12.2 EDITION 1 WATCH, 33 MM",
+      "type": "watches",
+      "price": 885,
+      "description": "Black highly resistant ceramic, steel and diamond\n",
+      "img": "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/j12-caliber-12-2-edition-1-watch-33-mm-black-black-ceramic-steel-diamond-packshot-default-h6784-8845525843998.jpg",
+      "id": 13
+    },
+    {
+      "title": "J12 PARADOXE WATCH CALIBER 12.1, 38 MM",
+      "type": "watches",
+      "price": 998,
+      "description": "White and black highly resistant ceramic and steel\n",
+      "img": "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/j12-paradoxe-watch-caliber-12-1-38-mm-white-black-white-ceramic-steel-black-ceramic-packshot-default-h6515-8832549814302.jpg",
+      "id": 14
+    },
+    {
+      "title": "ALLURE HOMME ÉDITION BLANCHE",
+      "type": "fragrance",
+      "price": 132,
+      "description": "An explosive alchemy of hot and cold. The citrus freshness of Sicilian Lemon and Calabrian Bergamot combines with the strength and warmth of Sandalwood, Haitian Vetiver and Vanilla from Madagascar.",
+      "img": "https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/allure-homme-edition-blanche-eau-de-parfum-spray-3-4fl-oz--packshot-default-127460-8848377118750.jpg",
+      "id": 15
+    },
+    {
+      "title": "SUBLIMAGE L’ESSENCE DE TEINT",
+      "type": "makeup",
+      "price": 150,
+      "description": "An exquisite foundation with an unprecedented serum-like texture that melts into skin and instantly creates a smoother, more radiant-looking complexion. Day after day, skin maintains a luminous appearance.",
+      "img": "https://www.chanel.com/images//t_one//w_0.48,h_0.48,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/sublimage-l-essence-de-teint-ultimate-radiance-generating-serum-foundation-b30-1-35fl-oz--packshot-default-147150-8835360981022.jpg",
+      "id": 16
+    },
+    {
+      "title": "ROUGE ALLURE LAQUE",
+      "type": "makeup",
+      "price": 126,
+      "description": "Three shades of the ultra-intense, ultra-longwearing satin shine liquid lipstick.\n",
+      "img": "https://www.chanel.com/images//t_one//w_0.38,h_0.38,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/rouge-allure-laque-ultrawear-shine-liquid-lip-colour-set-3x0-18oz--packshot-default-149115-8835354722334.jpg",
+      "id": 17
+    },
+    {
+      "title": "MADEMOISELLE J12",
+      "type": "watches",
+      "price": 750,
+      "description": "The encounter between J12 and Mademoiselle is a meeting in itself. Gabrielle Chanel poses in a preciously framed painting or mischievously clutches the watch’s case. Her silhouette alternates between looks and creative universes, from rue Cambon to the Côte d’Azur.",
+      "img": "https://puls-img.chanel.com/c_limit,w_1920/q_auto:best,dpr_2.0,f_auto/1646910383674-image4png_1180x1180.png",
+      "id": 18
+    },
+    {
+      "title": "BOY·FRIEND WATCH",
+      "type": "watches",
+      "price": 669,
+      "description": "Small version, BEIGE GOLD, quilted pattern calfskin strap\n",
+      "img": "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/boy-friend-watch-white-black-beige-beige-gold-calfskin-packshot-default-h6587-8845565755422.jpg",
+      "id": 19
+    },
+    {
+      "title": "MONSIEUR. SUPERLEGGERA EDITION WATCH",
+      "type": "watches",
+      "price": 789,
+      "description": "Matte black highly resistant ceramic and steel, matte black guilloché type dial with jumping hour and 240° retrograde minute",
+      "img": "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/monsieur-superleggera-edition-watch-black-matte-black-ceramic-steel-nylon-calfskin-packshot-default-h6823-8845590822942.jpg",
+      "id": 20
+    },
+    {
+      "title": "N°19",
+      "type": "fragrance",
+      "price": 235,
+      "description": "A play on contrasts: vibrant, green notes of Galbanum mingle with the soft, powdery notes of May Rose and Iris from Florence, along with Neroli from Grasse.",
+      "img": "https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/n-19-parfum-0-5fl-oz--packshot-default-120090-8833880555550.jpg",
+      "id": 21
+    },
+    {
+      "title": "ÉGOÏSTE",
+      "type": "fragrance",
+      "price": 110,
+      "description": "ÉGOÏSTE is a unique woody-spicy-amber composition with a strong personality. Lively, fresh top notes of Mandarin and Coriander, subtly spiced, blend into the warm and enveloping notes of Damask Rose. The richness of Sandalwood is underlined by the extreme sensuality of Vanilla and Ambrette Seed for an Oriental trail.",
+      "img": "https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/egoiste-eau-de-toilette-spray-3-4fl-oz--packshot-default-114460-8848376823838.jpg",
+      "id": 22
+    },
+    {
+      "title": "COCO NOIR",
+      "type": "fragrance",
+      "price": 156,
+      "description": "As a prelude, a vibrant, sophisticated burst dominated by bergamot sparks curiosity. A generous heart gradually reveals the sensuality of May rose and the remarkable note of geranium rose leaf. This luminous floral facet creates a striking presence, while a trail of Venezuelan tonka bean and Indonesian patchouli notes adds intrigue. ",
+      "img": "https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/coco-noir-eau-de-parfum-spray-3-4fl-oz--packshot-default-113660-8848377348126.jpg",
+      "id": 23
+    },
+    {
+      "title": "BLUSH LUMIÈRE",
+      "type": "makeup",
+      "price": 36,
+      "description": "A limited-edition powder blush created exclusively for the Spring-Summer 2022 Collection. The delicate formula adds radiant colour to cheeks. Embossed with a motif inspired by the light of the Mediterranean sun that shines over La Pausa, Gabrielle Chanel’s villa in the South of France.",
+      "img": "https://www.chanel.com/images//t_one//w_0.43,h_0.43,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/blush-lumiere-exclusive-creation-peche-rosee-0-49oz--packshot-default-151767-8843585093662.jpg",
+      "id": 24
+    },
+    {
+      "title": "LE VOLUME STRETCH DE CHANEL",
+      "type": "makeup",
+      "price": 35,
+      "description": "The patent-pending* 3D-printed brush is uniquely designed with a rounded shape, micro-bristles and a hollow core to wrap and stretch lashes in a single stroke.",
+      "img": "https://www.chanel.com/images//t_one//w_0.43,h_0.43,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/le-volume-stretch-de-chanel-volume-and-length-mascara-3d-printed-brush-10-noir-0-21oz--packshot-default-191810-8825045352478.jpg",
+      "id": 25
+    },
+    {
+      "title": "LES CHAÎNES DE CHANEL",
+      "type": "makeup",
+      "price": 52,
+      "description": "The soft, micro-fine formula dusts seamlessly onto skin for a smooth, radiant finish.\n\n",
+      "img": "https://www.chanel.com/images//t_one//w_0.43,h_0.43,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/les-chaines-de-chanel-illuminating-blush-powder-0-28oz--packshot-default-151570-8829647716382.jpg",
+      "id": 26
     }
   ]
 }

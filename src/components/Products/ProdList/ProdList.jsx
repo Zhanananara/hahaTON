@@ -41,7 +41,6 @@ const ProdList = () => {
     };
   };
 
-  // Чтобы в самом начале рождения компонента установить query params == параметры запроса, и именно по ним делать запрос getProducts()
   useEffect(() => {
     if (searchParams.get("type")) {
       setSearchParams(paramsWithType());
@@ -50,7 +49,6 @@ const ProdList = () => {
     }
   }, []);
 
-  // отрабатывает каждый раз, как меняется query params == параметры запроса
   useEffect(() => {
     getProducts();
   }, [searchParams]);
@@ -95,6 +93,7 @@ const ProdList = () => {
           <Spinner />
         )}
       </Grid>
+
       <div
         style={{
           margin: "50px 0",
