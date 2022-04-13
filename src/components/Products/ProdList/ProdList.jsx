@@ -21,7 +21,6 @@ const ProdList = () => {
   const [slider, setSlider] = useState(
     +searchParams.get("price_gte") || minSliderValue
   );
-  console.log(typeof pageTotalCount);
   const paramsWithType = () => {
     return {
       _limit: PRODUCTS_LIMIT,
