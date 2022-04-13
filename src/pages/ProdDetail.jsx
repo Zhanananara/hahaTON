@@ -22,7 +22,7 @@ const ProdDetail = () => {
           {forEditVal ? (
             <>
               <img width="400px" src={forEditVal.img} alt="" />
-              <h3>{forEditVal.title}</h3>
+              <h3 style={{ textAlign: "center" }}>{forEditVal.title}</h3>
               <p>{forEditVal.description}</p>
               <p>
                 Price is - <strong>{forEditVal.price}</strong>

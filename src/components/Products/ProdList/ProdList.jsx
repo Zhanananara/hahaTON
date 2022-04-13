@@ -86,7 +86,7 @@ const ProdList = () => {
         handleReset={handleReset}
       />
       <br />
-      <Grid container spacing={1} item xs={12} md={6} sx={{ display: "flex" }}>
+      <Grid container spacing={2}>
         {products && products.length > 0 ? (
           products.map((item) => <OneProduct key={item.id} item={item} />)
         ) : (
@@ -103,7 +103,7 @@ const ProdList = () => {
       >
         <Pagination
           count={pageTotalCount}
-          sx={{ display: "inline-block", color: "white" }}
+          sx={{ display: "inline-block", color: "black" }}
           onChange={(event, pageVal) => setPage(pageVal)}
           page={page}
         />

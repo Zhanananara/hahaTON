@@ -23,10 +23,20 @@ export default class PaymentForm extends React.Component {
     this.setState({ [name]: value });
   };
 
-  render() {
-    function payCard() {
+  payCard = () => {
+    if (
+      !this.state.number ||
+      !this.state.cvc ||
+      !this.state.name ||
+      !this.state.expiry
+    ) {
+      alert("Fill in the fields");
+    } else {
       notify("success", "Order successfully completed");
     }
+  };
+
+  render() {
     return (
       <div id="PaymentForm">
         <Cards
@@ -47,7 +57,7 @@ export default class PaymentForm extends React.Component {
           }}
         >
           <input
-            style={{ backgroundColor: "black", height: "40px" }}
+            style={{ backgroundColor: "black", color: "white", height: "40px" }}
             type="tel"
             name="number"
             placeholder="Card Number"
@@ -56,7 +66,7 @@ export default class PaymentForm extends React.Component {
           />
 
           <input
-            style={{ backgroundColor: "black", height: "40px" }}
+            style={{ backgroundColor: "black", height: "40px", color: "white" }}
             type="tel"
             name="name"
             placeholder="Name Lastname"
@@ -65,7 +75,7 @@ export default class PaymentForm extends React.Component {
           />
 
           <input
-            style={{ backgroundColor: "black", height: "40px" }}
+            style={{ backgroundColor: "black", color: "white", height: "40px" }}
             type="tel"
             name="expiry"
             placeholder="Valid thru"
@@ -73,23 +83,22 @@ export default class PaymentForm extends React.Component {
             onFocus={this.handleInputFocus}
           />
           <input
-            style={{ backgroundColor: "black", height: "40px" }}
+            style={{ backgroundColor: "black", color: "white", height: "40px" }}
             type="tel"
             name="cvc"
             placeholder="CVC"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
-          <Link to="/">
-            <Button
-              onClick={() => payCard()}
-              style={{ color: "white" }}
-              variant="contained"
-              color="grey"
-            >
-              Billing
-            </Button>
-          </Link>
+
+          <Button
+            onClick={() => this.payCard()}
+            style={{ color: "black", backgroundColor: "white" }}
+            variant="contained"
+            color="grey"
+          >
+            Billing
+          </Button>
         </form>
       </div>
     );
