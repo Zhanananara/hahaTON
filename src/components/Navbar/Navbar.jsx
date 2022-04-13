@@ -11,7 +11,6 @@ import Menu from "@mui/material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Button } from "@mui/material";
-import InfoIcon from "@mui/icons-material/Info";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LiveSearch from "../LiveSearch/LiveSearch";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
@@ -21,6 +20,8 @@ import { useAuth } from "../../contexts/AuthContextProvider";
 import PersonIcon from "@mui/icons-material/Person";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import { useFav } from "../../contexts/FavContextProvider";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -133,7 +134,7 @@ export default function Navbar() {
             aria-label="account of current user"
             color="inherit"
           >
-            <InfoIcon />
+            <ImportContactsIcon />
           </IconButton>
           <p>About</p>
         </NavLink>
@@ -145,7 +146,7 @@ export default function Navbar() {
             aria-label="account of current user"
             color="inherit"
           >
-            <InfoIcon />
+            <LocalOfferIcon />
           </IconButton>
           <p>Products</p>
         </NavLink>
@@ -157,7 +158,13 @@ export default function Navbar() {
             aria-label="account of current user"
             color="inherit"
           >
-            <InfoIcon />
+            {currentUser?.isAdmin ? (
+              <AdminPanelSettingsIcon />
+            ) : currentUser?.isLogged ? (
+              <PersonIcon />
+            ) : (
+              <AccountCircle />
+            )}
           </IconButton>
           <p>Admin</p>
         </NavLink>
