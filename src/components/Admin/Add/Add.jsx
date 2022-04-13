@@ -12,7 +12,7 @@ const Add = () => {
     <div>
       <div style={{ display: "flex" }}>
         <IconButton onClick={() => navigate(-1)}>
-          <ArrowBackIosNewIcon fontSize="large" sx={{ color: "white" }} />
+          <ArrowBackIosNewIcon fontSize="large" sx={{ color: "black" }} />
         </IconButton>
         <h2>U can add a new product</h2>
       </div>

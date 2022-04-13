@@ -3,7 +3,9 @@ import "./pages.css";
 
 const About = () => {
   return (
-    <div style={{ textAlign: "center" }}>
+    <div
+      style={{ textAlign: "center", backgroundColor: "black", color: "white" }}
+    >
       <h1>THE HISTORY</h1>
       <div className="image">
         <img

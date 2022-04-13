@@ -98,7 +98,8 @@ const ProdList = () => {
         style={{
           margin: "50px 0",
           textAlign: "center",
-          color: "white",
+          // backgroundColor: "lightgrey",
+          color: "black",
         }}
       >
         <Pagination
