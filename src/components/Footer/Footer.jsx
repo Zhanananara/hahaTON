@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer" style={{ paddingBottom: "20px" }}>
       <div className="footer-one">Chanel</div>
       <div className="footer-two">
         <div className=" first sp">

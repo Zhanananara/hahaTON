@@ -39,7 +39,7 @@ const IOSSlider = styled(Slider)(({ theme }) => ({
     },
     "& *": {
       background: "transparent",
-      color: theme.palette.mode === "dark" ? "#000" : "#fff",
+      color: theme.palette.mode === "dark" ? "#fff" : "#000",
     },
   },
   "& .MuiSlider-track": {

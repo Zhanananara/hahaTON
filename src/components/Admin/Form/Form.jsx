@@ -6,7 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Button } from "@mui/material";
 import { useParams } from "react-router-dom";
-import "./Form.css";
+// import "./Form.css";
 
 const initValues = {
   title: "",
@@ -117,7 +117,7 @@ const Form = ({ saveValues, compForEdit, forEditVal, getOneProduct }) => {
         <Button
           type="submit"
           variant="contained"
-          sx={{ backgroundColor: "white" }}
+          sx={{ backgroundColor: "black" }}
         >
           Submit
         </Button>

@@ -10,6 +10,11 @@ export const CART = {
   GET_CART: "GET_CART",
 };
 
+export const FAV = {
+  GET_FAV_LENGTH: "GET_FAV_LENGTH",
+  GET_FAV: "GET_FAV",
+};
+
 export const PRODUCTS_LIMIT = 2;
 
 export const ADMIN_EMAIL = "admin@admin.com";

@@ -75,10 +75,8 @@ const ProdList = () => {
   };
 
   return (
-    <div
-    // style={{ backgroundColor: "grey" }}
-    >
-      <h2>Prod list</h2>
+    <div style={{ marginTop: 40 }}>
+      {/* <h2>Prod list</h2> */}
       <Filter
         setPage={setPage}
         type={type}
@@ -102,12 +100,12 @@ const ProdList = () => {
           margin: "50px 0",
           textAlign: "center",
           // backgroundColor: "lightgrey",
-          color: "white",
+          color: "black",
         }}
       >
         <Pagination
           count={pageTotalCount}
-          sx={{ display: "inline-block", color: "white" }}
+          sx={{ display: "inline-block", color: "black" }}
           onChange={(event, pageVal) => setPage(pageVal)}
           page={page}
         />
