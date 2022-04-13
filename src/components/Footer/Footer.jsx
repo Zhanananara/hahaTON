@@ -39,40 +39,31 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <hr />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          marginRight: "200px",
-        }}
-      >
-        <div className="icons">
-          <IconButton
-            href="https://www.instagram.com/chanelofficial/"
-            style={{ color: "white" }}
-          >
-            <InstagramIcon />
-          </IconButton>
-          <IconButton
-            href="https://twitter.com/chanel?lang=en"
-            style={{ color: "white" }}
-          >
-            <TwitterIcon />
-          </IconButton>
-          <IconButton
-            href="https://www.facebook.com/chanel/"
-            style={{ color: "white" }}
-          >
-            <FacebookIcon />
-          </IconButton>
-          <IconButton
-            href="https://www.youtube.com/user/CHANEL"
-            style={{ color: "white" }}
-          >
-            <YouTubeIcon />
-          </IconButton>
-        </div>
+      <div className="icons">
+        <IconButton
+          href="https://www.instagram.com/chanelofficial/"
+          style={{ color: "white" }}
+        >
+          <InstagramIcon />
+        </IconButton>
+        <IconButton
+          href="https://twitter.com/chanel?lang=en"
+          style={{ color: "white" }}
+        >
+          <TwitterIcon />
+        </IconButton>
+        <IconButton
+          href="https://www.facebook.com/chanel/"
+          style={{ color: "white" }}
+        >
+          <FacebookIcon />
+        </IconButton>
+        <IconButton
+          href="https://www.youtube.com/user/CHANEL"
+          style={{ color: "white" }}
+        >
+          <YouTubeIcon />
+        </IconButton>
       </div>
     </div>
   );

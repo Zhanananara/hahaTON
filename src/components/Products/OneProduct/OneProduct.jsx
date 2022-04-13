@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -22,6 +22,7 @@ export default function OneProduct({ item }) {
   const [inCart, setInCart] = React.useState(isProdInCart(item.id));
   const { addDelToFav, isProdInFav } = useFav();
   const [inFav, setInFav] = React.useState(isProdInFav(item.id));
+  const { pathname } = useLocation();
 
   return (
     <Grid item xs={12} sm={6} md={6}>
@@ -90,13 +91,15 @@ export default function OneProduct({ item }) {
               )
             }
           />
-          <BottomNavigationAction
-            component={Link}
-            to={`detail/${item.id}`}
-            label="detail"
-            value="detail"
-            icon={<ReadMoreIcon />}
-          />
+          {pathname !== `detail/${item.id}` ? (
+            <BottomNavigationAction
+              component={Link}
+              to={`detail/${item.id}`}
+              label="detail"
+              value="detail"
+              icon={<ReadMoreIcon />}
+            />
+          ) : null}
         </BottomNavigation>
       </Card>
     </Grid>

@@ -1,13 +1,15 @@
-import { Container, Paper } from "@mui/material";
+import { Container, IconButton, Paper } from "@mui/material";
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useProductContext } from "../contexts/ProductContextProvider";
 import Spinner from "../components/Spinner/Spinner";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import "./pages.css";
 
 const ProdDetail = () => {
   const { prodId } = useParams();
-
   const { getOneProduct, forEditVal } = useProductContext();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getOneProduct(prodId);
@@ -17,17 +19,22 @@ const ProdDetail = () => {
     <Container maxWidth="lg">
       <div>
         <Paper>
-          <h1>RPODDETAIL</h1>
+          <div className="prodDetail">
+            <IconButton onClick={() => navigate(-1)}>
+              <ArrowBackIosNewIcon fontSize="large" sx={{ color: "black" }} />
+            </IconButton>
+            <h1>RPODDETAIL</h1>
+          </div>
           {forEditVal ? (
             <>
-              <img width="400px" src={forEditVal.img} alt="" />
-              <h3>{forEditVal.title}</h3>
+              <img width="75%" src={forEditVal.img} alt="" />
+              <div>
+                <h3>{forEditVal.title}</h3>
+                <p>{forEditVal.type}</p>
+              </div>
               <p>{forEditVal.description}</p>
               <p>
-                Price is - <strong>{forEditVal.price}</strong>
-              </p>
-              <p>
-                Type is - <strong>{forEditVal.type}</strong>
+                $<strong>{forEditVal.price}</strong>
               </p>
             </>
           ) : (

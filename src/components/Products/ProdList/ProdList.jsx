@@ -21,7 +21,7 @@ const ProdList = () => {
   const [slider, setSlider] = useState(
     +searchParams.get("price_gte") || minSliderValue
   );
-
+  console.log(typeof pageTotalCount);
   const paramsWithType = () => {
     return {
       _limit: PRODUCTS_LIMIT,
@@ -103,10 +103,10 @@ const ProdList = () => {
         }}
       >
         <Pagination
-          count={pageTotalCount}
+          count={+pageTotalCount}
           sx={{ display: "inline-block", color: "black" }}
-          onChange={(event, pageVal) => setPage(pageVal)}
-          page={page}
+          onChange={(event, pageVal) => setPage(+pageVal)}
+          page={+page}
         />
       </div>
     </div>

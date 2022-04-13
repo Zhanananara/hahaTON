@@ -14,6 +14,7 @@ import { Button, Container } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import emptyCart from "../img/empty-cart.png";
 
 const Cart = () => {
   const { cart, getCart, changeProductCount, deleteProdInCart } = useCart();
@@ -117,12 +118,8 @@ const Cart = () => {
             </Link>
           </>
         ) : (
-          <div style={{ textAlign: "center" }}>
-            <img
-              width="25%"
-              src="https://thumbs.dreamstime.com/z/girl-beautiful-dress-supermarket-9827992.jpg"
-              alt=""
-            />
+          <div style={{ textAlign: "center", marginBottom: "30px" }}>
+            <img width="100%" src={emptyCart} alt="" />
             <br />
             <Button variant="contained" component={Link} to="/products">
               Go shopping
