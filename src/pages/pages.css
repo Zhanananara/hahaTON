@@ -94,3 +94,22 @@
 .prodDetail {
   display: flex;
 }
+.detail_body {
+  display: flex;
+  margin-bottom: 2%;
+}
+.detail_right {
+  display: flex;
+  flex-direction: column;
+}
+#desc {
+  font-size: 1.5rem;
+  color: black;
+}
+#price {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 1.5rem;
+  margin-right: 5%;
+  font-weight: 800;
+}

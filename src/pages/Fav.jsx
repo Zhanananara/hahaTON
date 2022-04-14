@@ -20,7 +20,7 @@ const Fav = () => {
   return (
     <div>
       <Container maxWidth="xl" xs={12} sm={6} md={6}>
-        <h1>Favorite</h1>
+        <h1>Wishlist</h1>
         <Grid
           item
           xs={12}

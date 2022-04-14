@@ -12,7 +12,6 @@ import { IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import { Link } from "react-router-dom";
-
 const List = () => {
   const { products, getProducts, deleteProduct } = useProductContext();
 
@@ -27,7 +26,11 @@ const List = () => {
   };
 
   return (
-    <div style={{ marginBottom: "20px" }}>
+    <div
+      style={{
+        marginBottom: "20px",
+      }}
+    >
       <h2>Admin List</h2>
       {products && products.length > 0 ? (
         <TableContainer component={Paper}>

@@ -44,4 +44,5 @@ li {
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-bottom: 20px;
 }

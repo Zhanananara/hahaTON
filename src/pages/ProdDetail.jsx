@@ -1,4 +1,14 @@
-import { Container, IconButton, Paper } from "@mui/material";
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  Container,
+  IconButton,
+  Paper,
+  Typography,
+} from "@mui/material";
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useProductContext } from "../contexts/ProductContextProvider";
@@ -23,19 +33,46 @@ const ProdDetail = () => {
             <IconButton onClick={() => navigate(-1)}>
               <ArrowBackIosNewIcon fontSize="large" sx={{ color: "black" }} />
             </IconButton>
-            <h1>RPODDETAIL</h1>
+            <h1>DETAILS</h1>
           </div>
           {forEditVal ? (
             <>
-              <img width="75%" src={forEditVal.img} alt="" />
-              <div>
-                <h3>{forEditVal.title}</h3>
-                <p>{forEditVal.type}</p>
-              </div>
-              <p>{forEditVal.description}</p>
-              <p>
-                $<strong>{forEditVal.price}</strong>
-              </p>
+              <Card sx={{ marginBottom: "20px" }}>
+                <div className="detail_body">
+                  <div className="detail_right">
+                    <CardHeader
+                      title={forEditVal.title}
+                      subheader={forEditVal.type}
+                      sx={{
+                        textAlign: "center",
+                        fontWeight: "bold",
+                      }}
+                    />
+                    <CardMedia
+                      component="img"
+                      image={forEditVal.img}
+                      alt={forEditVal.title}
+                      sx={{
+                        width: "100%",
+                        height: "80vh",
+                        textAlign: "center",
+                      }}
+                    />
+                    <CardContent>
+                      <Typography
+                        id="desc"
+                        variant="body2"
+                        color="text.secondary"
+                      >
+                        {forEditVal.description}
+                      </Typography>
+                    </CardContent>
+                    <CardActions disableSpacing id="price">
+                      ${forEditVal.price}
+                    </CardActions>
+                  </div>
+                </div>
+              </Card>
             </>
           ) : (
             <Spinner />
