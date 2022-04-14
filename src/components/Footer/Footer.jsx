@@ -1,4 +1,4 @@
-import { IconButton } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import React from "react";
 import "./Footer.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -8,7 +8,6 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 const Footer = () => {
   return (
     <div className="footer" style={{ paddingBottom: "20px" }}>
-      <div className="footer-one">Chanel</div>
       <div className="footer-two">
         <div className=" first sp">
           <p>Explore chanel.com</p>
@@ -64,6 +63,11 @@ const Footer = () => {
         >
           <YouTubeIcon />
         </IconButton>
+      </div>
+      <div className="footer-one">
+        <Button xs={{ color: "white" }} href="https://www.chanel.com/us/">
+          Chanel.com
+        </Button>
       </div>
     </div>
   );
