@@ -13,6 +13,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Link as AuthLink } from "react-router-dom";
+import { notify } from "../Toastify/Toastify";
 
 function Copyright(props) {
   return (
@@ -23,8 +24,8 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="https://chanel.com/">
+        Chanel.com
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -44,16 +45,12 @@ export default function AuthForm({
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // console.log({
-    //   email: data.get('email'),
-    //   password: data.get('password'),
-    // });
     handleSave(data.get("email"), data.get("password"));
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: "100vh" }}>
+      <Grid container component="main" sx={{ height: "90vh" }}>
         <CssBaseline />
         <Grid
           item
@@ -61,7 +58,8 @@ export default function AuthForm({
           sm={4}
           md={7}
           sx={{
-            backgroundImage: "url(https://source.unsplash.com/random)",
+            backgroundImage: `url(https://images.unsplash.com/photo-1591892204579-530edbd4724d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80),
+              url(https://images.unsplash.com/photo-1594913785077-d2d533571a78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)`,
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
@@ -129,9 +127,7 @@ export default function AuthForm({
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
+                  <Link href="#" variant="body2"></Link>
                 </Grid>
                 <Grid item>
                   <AuthLink to={link}>{linkText}</AuthLink>

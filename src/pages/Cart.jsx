@@ -14,7 +14,7 @@ import { Button, Container } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import emptyCart from "../img/empty-cart.png";
+import emptyCart from "../file/empty-cart.png";
 
 const Cart = () => {
   const { cart, getCart, changeProductCount, deleteProdInCart } = useCart();
