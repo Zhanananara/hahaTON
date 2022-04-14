@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useReducer } from "react";
 import { FAV } from "../helpers/consts";
-import { calcTotalPrice, calSubPrice } from "../helpers/functions";
 
 const favContext = createContext();
 
@@ -66,9 +65,6 @@ const FavContextProvider = ({ children }) => {
     } else {
       fav.products.push(newProd);
     }
-
-    fav.totalPrice = calcTotalPrice(fav.products);
-
     localStorage.setItem("fav", JSON.stringify(fav));
     getFavLength();
     dispatch({
@@ -102,26 +98,11 @@ const FavContextProvider = ({ children }) => {
     });
   };
 
-  const changeProductCount = (newCount, id) => {
-    let fav = createFavFromLS();
-    fav.products = fav.products.map((elem) => {
-      if (elem.item.id === id) {
-        elem.count = newCount;
-        elem.subPrice = calSubPrice(elem);
-      }
-      return elem;
-    });
-    fav.totalPrice = calcTotalPrice(fav.products);
-    localStorage.setItem("fav", JSON.stringify(fav));
-    getFav();
-  };
-
   const deleteProdInFav = (id) => {
     let fav = createFavFromLS();
     fav.products = fav.products.filter((elem) => {
       return elem.item.id !== id;
     });
-    fav.totalPrice = calcTotalPrice(fav.products);
     localStorage.setItem("fav", JSON.stringify(fav));
     getFav();
     getFavLength();
@@ -136,7 +117,6 @@ const FavContextProvider = ({ children }) => {
         getFavLength,
         isProdInFav,
         getFav,
-        changeProductCount,
         deleteProdInFav,
       }}
     >

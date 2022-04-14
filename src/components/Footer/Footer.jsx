@@ -65,9 +65,7 @@ const Footer = () => {
         </IconButton>
       </div>
       <div className="footer-one">
-        <Button xs={{ color: "white" }} href="https://www.chanel.com/us/">
-          Chanel.com
-        </Button>
+        <a href="http://www.chanel.com/us">chanel.com</a>
       </div>
     </div>
   );

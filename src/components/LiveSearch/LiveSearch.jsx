@@ -46,28 +46,21 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const LiveSearch = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const location = useLocation()
-
+  const location = useLocation();
 
   const [inpSearch, setInpSearch] = useState(searchParams.get("q") || "");
 
   useEffect(() => {
     let currentParams = Object.fromEntries([...searchParams]);
     // console.log(currentParams)
-    if(location.pathname == "/products") {
+    if (location.pathname == "/products") {
       setSearchParams({
         ...currentParams,
         _page: 1,
         q: inpSearch,
       });
     }
-    }, [inpSearch]);
-
-  // useEffect(() => {
-  //   if (searchParams.get("q") !== inpSearch) {
-  //     setInpSearch(searchParams.get("q") || "");
-  //   }
-  // }, []);
+  }, [inpSearch]);
 
   return (
     <Search>
