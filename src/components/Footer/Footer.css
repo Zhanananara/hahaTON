@@ -6,10 +6,15 @@
 
 .footer-one {
   text-align: center;
-  margin: 1% auto;
-  font-size: 2.5rem;
+  margin: 0 auto;
+  font-size: 0.5rem;
   font-weight: 500;
   text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-one a {
+  text-decoration: none;
+  color: white !important;
 }
 .footer-two {
   display: flex;
@@ -44,5 +49,4 @@ li {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-bottom: 20px;
 }
