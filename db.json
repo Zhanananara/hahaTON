@@ -11,14 +11,6 @@
     {
       "title": "N°5",
       "type": "fragrance",
-      "price": 60,
-      "description": "The Shower Gel\n",
-      "img": "https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/n-5-the-shower-gel-6-8fl-oz--packshot-default-105768-8835354099742.jpg",
-      "id": 6
-    },
-    {
-      "title": "N°5",
-      "type": "fragrance",
       "price": 125,
       "description": "Powerful top notes, dominated by ylang-ylang and neroli, are enhanced by aldehydes. At the very heart of the fragrance is the fullness of a magnificent rose and jasmine floral accord. A base of vanilla, vetiver and sandalwood creates a warm, dynamic sillage.",
       "img": "https://www.chanel.com/images//t_one//w_0.55,h_0.55,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/n-5-eau-de-toilette-spray-3-4fl-oz--packshot-default-105467-8833875804190.jpg",
@@ -175,6 +167,14 @@
       "description": "The soft, micro-fine formula dusts seamlessly onto skin for a smooth, radiant finish.\n\n",
       "img": "https://www.chanel.com/images//t_one//w_0.43,h_0.43,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/les-chaines-de-chanel-illuminating-blush-powder-0-28oz--packshot-default-151570-8829647716382.jpg",
       "id": 26
+    },
+    {
+      "title": "GABRIELLE CHANEL",
+      "type": "fragrance",
+      "price": 121,
+      "description": "A solar fragrance created from 4 white flowers: intense jasmine, bright ylang-ylang, sparkling orange blossom and intensely feminine Grasse tuberose.\n\n",
+      "img": "https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/gabrielle-chanel-eau-de-parfum-twist-and-spray-3x0-7fl-oz--packshot-default-120400-8820835516446.jpg",
+      "id": 27
     }
   ]
 }

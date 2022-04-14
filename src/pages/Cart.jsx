@@ -25,7 +25,7 @@ const Cart = () => {
   return (
     <div>
       <Container maxWidth="lg">
-        <h1>Cart</h1>
+        <h1 style={{ textAlign: "center" }}>Shopping bag</h1>
         {cart?.products.length > 0 ? (
           <>
             <TableContainer component={Paper}>
@@ -46,10 +46,10 @@ const Cart = () => {
                       Subprice
                     </TableCell>
                     <TableCell sx={{ fontWeight: "bold" }} align="right">
-                      Count
+                      Quantity
                     </TableCell>
                     <TableCell sx={{ fontWeight: "bold" }} align="right">
-                      Del
+                      Delete
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -107,11 +107,9 @@ const Cart = () => {
               </Table>
             </TableContainer>
 
-            <Typography variant="h4">
-              Total price: ${cart.totalPrice}
-            </Typography>
+            <Typography variant="h4">Subtotal: ${cart.totalPrice}</Typography>
             <Link to="/card">
-              <Button variant="contained">
+              <Button variant="contained" sx={{ color: "light" }}>
                 BUY NOW FOR ${cart.totalPrice}
               </Button>
             </Link>

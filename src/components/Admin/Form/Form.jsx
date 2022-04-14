@@ -117,7 +117,7 @@ const Form = ({ saveValues, compForEdit, forEditVal, getOneProduct }) => {
         <Button
           type="submit"
           variant="contained"
-          sx={{ backgroundColor: "black" }}
+          sx={{ backgroundColor: "black", marginBottom: "20px" }}
         >
           Submit
         </Button>

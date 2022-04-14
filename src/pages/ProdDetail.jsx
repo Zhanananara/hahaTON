@@ -37,19 +37,26 @@ const ProdDetail = () => {
           </div>
           {forEditVal ? (
             <>
-              <Card>
+              <Card sx={{ marginBottom: "20px" }}>
                 <div className="detail_body">
                   <div className="detail_right">
                     <CardHeader
                       title={forEditVal.title}
                       subheader={forEditVal.type}
-                      sx={{ textAlign: "center", fontWeight: "bold" }}
+                      sx={{
+                        textAlign: "center",
+                        fontWeight: "bold",
+                      }}
                     />
                     <CardMedia
                       component="img"
                       image={forEditVal.img}
                       alt={forEditVal.title}
-                      sx={{ width: "100%", textAlign: "center" }}
+                      sx={{
+                        width: "100%",
+                        height: "80vh",
+                        textAlign: "center",
+                      }}
                     />
                     <CardContent>
                       <Typography
