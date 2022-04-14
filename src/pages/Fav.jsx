@@ -8,7 +8,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import { Grid } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
-import emptyCart from "../img/empty-cart.png";
+import emptyCart from "../file/empty-cart.png";
+import { notify } from "../components/Toastify/Toastify";
 
 const Fav = () => {
   const { fav, getFav, deleteProdInFav } = useFav();
@@ -42,14 +43,25 @@ const Fav = () => {
                     display: "flex",
                     marginRight: "10px",
                     width: 400,
-                    height: 300,
+                    height: 350,
                     margin: "20px auto",
                   }}
                   key={elem.item.id}
                 >
-                  <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      flexWrap: "wrap",
+                      width: 200,
+                    }}
+                  >
                     <CardContent sx={{ flex: "1 0 auto" }}>
-                      <Typography component="div" variant="h5">
+                      <Typography
+                        component="div"
+                        variant="h5"
+                        sx={{ minWidth: 100 }}
+                      >
                         {elem.item.title}
                       </Typography>
                       <Typography
@@ -68,7 +80,15 @@ const Fav = () => {
                         pb: 1,
                       }}
                     >
-                      <IconButton onClick={() => deleteProdInFav(elem.item.id)}>
+                      <IconButton
+                        onClick={() => (
+                          deleteProdInFav(elem.item.id),
+                          notify(
+                            "success",
+                            `products ${elem.item.title} has deleted`
+                          )
+                        )}
+                      >
                         <DeleteIcon />
                       </IconButton>
                       <IconButton
@@ -83,7 +103,12 @@ const Fav = () => {
                   </Box>
                   <CardMedia
                     component="img"
-                    sx={{ width: 151 }}
+                    sx={{
+                      width: "200px",
+                      paddingRight: "10px",
+                      textAlign: "center",
+                      float: "right",
+                    }}
                     src={elem.item.img}
                     alt={elem.item.title}
                   />
