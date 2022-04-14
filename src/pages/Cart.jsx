@@ -25,7 +25,7 @@ const Cart = () => {
 
   return (
     <div>
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <h1 style={{ textAlign: "center" }}>Shopping bag</h1>
         {cart?.products.length > 0 ? (
           <>

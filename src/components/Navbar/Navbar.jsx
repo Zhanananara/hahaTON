@@ -323,6 +323,7 @@ export default function Navbar() {
               fontWeight: "500",
               textTransform: "uppercase",
               fontFamily: "Sora, sans-serif",
+              paddingLeft: "150px",
             }}
           >
             Chanel
